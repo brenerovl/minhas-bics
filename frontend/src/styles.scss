@@ -30,3 +30,11 @@ $minhas-bics-theme: mat-light-theme($minhas-bics-primary, $minhas-bics-accent, $
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-card-minhas-bics {
+    margin: 10px;
+}
+
+body {
+    background: whitesmoke;
+}

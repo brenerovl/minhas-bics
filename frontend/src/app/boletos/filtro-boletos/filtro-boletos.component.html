@@ -1,0 +1,26 @@
+<mat-card class = "mat-card-minhas-bics">
+    <mat-card-header>
+        <mat-card-title>Filtro</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <form>
+            <mat-form-field class="filtro-boletos-form">
+                <mat-label>Nome do Boleto</mat-label>
+                <input matInput placeholder="Nome">
+            </mat-form-field>
+
+            <mat-form-field class="filtro-boletos-form">
+                <mat-label>Data de Vencimento</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker ></mat-datepicker>
+            </mat-form-field>
+
+            <mat-checkbox class = "filtro-boletos-form color-checkbox-filtro">Incluir boletos pagos</mat-checkbox>
+
+            <button class = "filtro-boletos-form button-minhas-bics" mat-raised-button>Filtrar</button>
+
+        </form>
+    </mat-card-content>
+</mat-card>
