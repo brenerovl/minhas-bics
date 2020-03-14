@@ -1,0 +1,19 @@
+.filtro-boletos-form {
+    margin: 10px;
+}
+
+::ng-deep .mat-checkbox-checked .mat-checkbox-background, .mat-checkbox-indeterminate .mat-checkbox-background {
+    background-color: #1D3557 !important;
+}
+
+::ng-deep .mat-calendar-body-today:not(.mat-calendar-body-selected){
+    border-color: #1D3557;
+}
+::ng-deep .mat-calendar-body-selected {
+    background-color: #1d3557;
+}
+
+mat-datepicker-toggle {
+    color: #1D3557 !important;
+
+}

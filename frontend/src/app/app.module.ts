@@ -4,19 +4,31 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
-import { ListaContasComponent } from './lista-contas/lista-contas.component';
+import { ListaBoletosComponent } from './boletos/lista-boletos/lista-boletos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BoletosComponent } from './boletos/boletos.component';
+import { MatInputModule } from '@angular/material/input';
+import { FiltroBoletosComponent } from './boletos/filtro-boletos/filtro-boletos.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatMomentDateModule } from "@angular/material-moment-adapter";
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaContasComponent
+    ListaBoletosComponent,
+    BoletosComponent,
+    FiltroBoletosComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

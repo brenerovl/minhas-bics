@@ -1,0 +1,30 @@
+<mat-card class = "mat-card-minhas-bics">
+    <mat-card-header>
+        <mat-card-title>Minhas Contas</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <table class="tabela-boletos tabela-minhas-bics">
+            <tbody>
+                <tr>
+                    <th class = "tabela-minhas-bics-header-colum">Conta</th>
+                    <th class = "tabela-minhas-bics-header-colum">Vencimento</th>
+                    <th class = "tabela-minhas-bics-header-colum">Valor</th>
+                    <th class = "tabela-minhas-bics-header-colum">Código de Barras</th>
+                    <th class = "tabela-minhas-bics-header-colum"></th>
+                </tr>
+                <tr class= "tabela-minhas-bics-content-row" *ngFor = "let conta of listaContas">
+                    <td class = "tabela-minhas-bics-content-colum">{{conta.nomeConta}}</td>
+                    <td class = "tabela-minhas-bics-content-colum">{{conta.dataVencimento}}</td>
+                    <td class = "tabela-minhas-bics-content-colum">{{conta.valor}}</td>
+                    <td class = "tabela-minhas-bics-content-colum">{{conta.codigoBarra}}</td>
+                    <td class = "tabela-minhas-bics-content-colum">
+                        <button class = "button-minhas-bics" *ngIf = "conta.isContaPaga"
+                            mat-raised-button
+                            (click) = "onContaPaga(conta)">Pagar Conta</button>
+                        <p *ngIf = "!conta.isContaPaga">Ta pago</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-card-content>
+</mat-card>
