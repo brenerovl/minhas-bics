@@ -38,3 +38,30 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 body {
     background: whitesmoke;
 }
+
+button.button-minhas-bics {
+    background-color: #1D3557;
+    color: white;
+}
+
+.tabela-minhas-bics {
+    border-collapse: collapse;
+    border: 1px solid rgb(173, 173, 173);
+}
+
+.tabela-minhas-bics-content-colum {
+    padding: 10px;
+    text-align: center;
+
+    border-bottom: 1px solid #1D3557;
+
+}
+.tabela-minhas-bics-header-colum {
+    padding: 10px;
+    border-bottom: 1px solid #1D3557;
+
+}
+
+tr.tabela-minhas-bics-content-row:nth-child(even) {
+    background: rgb(230, 238, 250);
+}

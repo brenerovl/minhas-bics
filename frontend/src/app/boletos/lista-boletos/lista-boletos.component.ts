@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Boleto } from '../model/contaModel';
+import * as moment from 'moment';
 
 @Component({
   selector: 'lista-boletos',
@@ -7,31 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaBoletosComponent implements OnInit {
 
-  listaContas: Object[] = [];
+  listaContas: Boleto[] = [];
 
   constructor() { }
 
   ngOnInit() {
     this.listaContas = [
       {
-        id: 1,
-        nome: 'Cemig',
-        vencimento: '12/03/2020',
-        valor: '45,00',
+        nomeConta: 'Cemig',
+        dataVencimento: moment(),
+        codigoBarra: '0000000',
+        valor: 45.00,
         isContaPaga: true
       },
       {
-        id: 2,
-        nome: 'G6',
-        vencimento: '21/03/2020',
-        valor: '80,00',
+        nomeConta: 'G6',
+        dataVencimento: moment(),
+        codigoBarra: '00000000',
+        valor: 80.00,
         isContaPaga: false
       },
       {
-        id: 3,
-        nome: 'Condomínio',
-        vencimento: '20/03/2020',
-        valor: '335,00',
+        nomeConta: 'Condomínio',
+        dataVencimento: moment(),
+        codigoBarra: '000000000',
+        valor: 335.00,
         isContaPaga: true
       },
     ];
